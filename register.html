@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro de Usuario</title> <!-- Título que aparece en la pestaña del navegador -->
+</head>
+<body>
+    <h2>Registrar Usuario</h2> <!-- Encabezado principal de la página -->
+
+    <!-- Formulario para el registro de usuarios. Se envía usando el método POST -->
+    <form method="POST">
+        <!-- Campo para ingresar el nombre completo -->
+        <label>Nombre Completo:</label><br>
+        <input type="text" name="nombre_completo" required><br><br>
+
+        <!-- Campo para ingresar el correo electrónico -->
+        <label>Correo:</label><br>
+        <input type="email" name="correo" required><br><br>
+
+        <!-- Campo para ingresar el nombre de usuario -->
+        <label>Usuario:</label><br>
+        <input type="text" name="usuario" required><br><br>
+
+        <!-- Campo para ingresar la contraseña -->
+        <label>Contraseña:</label><br>
+        <input type="password" name="contraseña" required><br><br>
+
+        <!-- Selector de estado del usuario: Activo o Bloqueado -->
+        <label>Estado:</label><br>
+        <select name="estado" required>
+            <option value="Activo">Activo</option>
+            <option value="Bloqueado">Bloqueado</option>
+        </select><br><br>
+
+        <!-- Selector para el rol del usuario: Usuario o Administrador -->
+        <label>Rol:</label><br>
+        <select name="rol_id" required>
+            <option value="Usuario">Usuario</option>
+            <option value="Administrador">Administrador</option>
+        </select><br><br>
+
+        <!-- Botón para enviar el formulario -->
+        <button type="submit">Registrar</button>
+    </form>
+
+    <!-- Muestra el mensaje (de error o éxito) que se recibe desde el servidor -->
+    <p style="color:red;">{{ mensaje }}</p>
+</body>
+</html>
